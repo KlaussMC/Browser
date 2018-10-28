@@ -1,0 +1,183 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Segoe UI", "Roboto", "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-weight: lighter;
+    outline: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.window {
+    background: #fff;
+    height: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.window button {
+    background: transparent;
+    border: none;
+    height: 30px;
+    text-align: center;
+    width: 50px;
+    position: relative;
+    float: right;
+    display: block;
+    cursor: pointer;
+}
+.window button:hover {
+    background: #eee;
+}
+
+.window button.close {
+    background: #a00;
+}
+
+.window button.close:hover {
+    background: #800;
+}
+
+.tabs {
+    position: fixed;
+    top: 0;
+}
+
+.tabs .tab-displayer {
+    display: flex;
+    width: calc(100vw - 150px);
+    height: 30px;
+    padding-top: 7px;
+    padding-left: 7px;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+
+.tabs .tab-displayer .tab {
+    width: 100%;
+    max-width: 250px;
+    background: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #ddd;
+    line-height: 23px;
+    padding-left: 5px;
+    height: 23px;
+    margin-right: 5px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+
+    cursor: pointer;
+}
+
+.tabs .tab-displayer .tab .favicon {
+    margin: 3px;
+}
+
+.tabs .new-tab-btn-wrapper {
+    cursor: pointer;
+    width: 30px;
+    padding: 0;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    background: #fff !important;
+    margin-top: -1px !important;
+    height: 21px;
+    border: 1px solid #ddd;
+}
+.tabs .new-tab-btn-wrapper > * {
+    cursor: pointer;
+}
+.tabs .new-tab-btn-wrapper:hover {
+    background: #eee;
+}
+.tabs .new-tab-btn-wrapper:active {
+    margin-top: -1px;
+}
+
+.tabs .new-tab-btn-wrapper button {
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: center;
+    line-height: 23px;
+    padding: 0;
+    height: 23px;
+    width: 30px;
+}
+.tabs .new-tab-btn-wrapper button img {
+    width: 15px;
+}
+
+.tabs .tab-displayer .tab.active, .tabs .new-tab-btn-wrapper {
+    background: #eee;
+    border-bottom: none;
+    /* margin-top: 2px; */
+    border-top: 3px solid darkorange;
+    line-height: 21px;
+    height: 23px;
+}
+
+.tabs .tab-displayer .tab:hover {
+    background: #eee;
+}
+
+.nav {
+    background: #eee;
+    padding: 10px;
+    display: flex;
+    width: 100vw;
+    padding: 10px;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 90px auto 30px 30px 5px;
+}
+
+.nav .buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav button, .nav input {
+    background: #ddd;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.nav button:hover {
+    background: darkorange;
+}
+
+.nav input {
+    width: 100%;
+    padding-left: 10px;
+    color: #555;
+    font-weight: 400 !important;
+    font-size: 10pt;
+    cursor: text;
+}
+
+webview {
+    display: none;
+    height: calc(100vh - 80px);
+}
+
+webview.active_view {
+    display: flex;
+}

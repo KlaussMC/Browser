@@ -1,0 +1,27 @@
+{
+    "name": "Browser",
+    "version": "1.0.0",
+    "description": "A Challenge by my IT teacher to make a better looking timer for Parent-Teacher interviews",
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^2.0.7"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "open": "electron ./main.js "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KlaussMC/Timer.git"
+    },
+    "keywords": [
+        "Timer",
+        "Timekeeper"
+    ],
+    "author": "Jacob Schneider",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/KlaussMC/Timer/issues"
+    },
+    "homepage": "https://github.com/KlaussMC/Timer#readme"
+}

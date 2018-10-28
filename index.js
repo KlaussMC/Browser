@@ -1,0 +1,1 @@
+console.log(require('./server.js').listen(65534) ? 'listening' : 'error')
